@@ -10,11 +10,11 @@ terraform {
 
     # Configure Terraform to store the state in your S3 bucket (with encryption and locking)
   backend "s3" {
-    # Replace this with your bucket name!
+    
     bucket = "terraform-state-key20231117084134961500000001"
     key = "workspaces-example/terraform.tfstate"
     region = "us-east-2"
-    # Replace this with your DynamoDB table name!
+    
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt = true
  }
